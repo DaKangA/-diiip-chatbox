@@ -1,0 +1,38 @@
+$color_1: #f0f0f0;
+$color_2: #e3e3e3;
+$color_3: #bababa;
+$color_4: white;
+$font_family_1: 'Microsoft JhengHei', Arial, sans-serif;
+$background_color_1: rgba(0, 0, 0, 0.5);
+$background_color_2: rgba(0, 0, 0, 0.3);
+$background_color_3: rgba(170, 187, 204, 0.1);
+$background_color_4: white;
+$background_color_5: transparent;
+$background_color_6: rgba(189, 195, 199, 0.2);
+$box-radius: 8px;
+
+@keyframes ball {
+	0% {
+		margin-top: 0;
+	}
+	20% {
+		margin-top: 3px;
+	}
+	80% {
+		margin-top: -5px;
+	}
+}
+@keyframes pop {
+	0% {
+		transform: scale(0.6);
+	}
+	30% {
+		transform: scale(1.1);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
