@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <chat-box />
+    <chat-box :centered="true" :pos="{x: 300, y: 500}" />
   </div>
 </template>
 

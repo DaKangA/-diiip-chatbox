@@ -16,11 +16,11 @@ npm install --save @diiip/chatbox
 
 ```js
 import Vue from 'vue'
-import @diiip/chatbox from '@diiip/chatbox'
+import Chatbox from '@diiip/chatbox'
 // You need a specific loader for CSS files like https://github.com/webpack/css-loader
 import '@diiip/chatbox/dist/@diiip/chatbox.css'
 
-Vue.use(@diiip/chatbox)
+Vue.use(Chatbox)
 ```
 
 ### Browser
@@ -57,7 +57,6 @@ Bundle the js and css of to the `dist` folder:
 ```bash
 npm run build
 ```
-
 
 ## Publishing
 

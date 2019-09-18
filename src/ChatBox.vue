@@ -1,5 +1,8 @@
 <template>
-  <div class="chat">
+  <div
+    class="chat"
+    :style="`top: ${pos.y}px; left: ${pos.x}px; ${centered ? 'transform: translate(-50%, -50%);' : ''}`"
+  >
     <chat-title />
     <div class="messages">
       <chat-msg :msgList="msgList" />
@@ -18,6 +21,21 @@ export default {
   data() {
     return {
       msgList: []
+    }
+  },
+  props: {
+    pos: {
+      type: Object,
+      default() {
+        return {
+          x: 0,
+          y: 0
+        }
+      }
+    },
+    centered: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -73,9 +91,6 @@ export default {
 
 .chat {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 300px;
   height: 80vh;
   max-height: 500px;

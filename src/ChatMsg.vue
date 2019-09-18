@@ -9,7 +9,9 @@
       {{msg.content}}
       <div class="timestamp">{{msg.date}}</div>
     </div>
-    <div v-if="typing" class="message personal typing"><span></span></div>
+    <div v-if="typing" class="message personal typing">
+      <span></span>
+    </div>
   </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
   props: {
     msgList: Array
   },
-  data () {
+  data() {
     return {
       typing: false
     }
@@ -39,7 +41,7 @@ export default {
       if (!this.typing) this.typing = typing
     })
   },
-  beforDestroy(){
+  beforDestroy() {
     this.$bus.$off('on-typing')
   }
 }
